@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Drawing together</title>
+  <style media="screen">
+  #container{
+    display: flex;
+    flex-direction: horizontal;
+  }
+  #canvas {
+    border: 5px solid black;
+  }
+  #drawingboard{
+    flex: 0 1 100%;
+  }
+  #tools {
+    float: left;
+
+  }
+  #chat {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font: 13px Helvetica, Arial; }
+  form {border: 5px red solid;
+    padding: 3px;
+    flex: 1 1;
+    bottom: 0; width: 100%; }
+    form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+    form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+    #messages { list-style-type: none; margin: 0; padding: 0;
+      border: green 5px solid;
+      flex: 10 0;
+height: 10px;
+      overflow-Y: auto;
+
+    }
+    #messages li { padding: 5px 10px;
+      width: 100%;
+      min-height: 10px;
+    }
+    #messages li:nth-child(odd)
+    { background: #eee;
+    }
+    .join, .leave { color: gray; }
+    .handle { color: orange; font-weight: bold; }
+
+#Start{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+    </style>
+
+
+
+
+  </head>
+
+
+  <body>
+    <div id="container">
+      <div id="drawingboard">
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <div id="tools">
+          <input type="color" id="color-picker">
+          <input type="number" id="thickness-picker" placeholder="20">
+          <button type="button" name="Eraser" id="Eraser"> Eraser</button>
+          <button type="button" name="Reset" id = "reset">Reset</button>
+        </div>
+      </div>
+
+
+
+      <div id="chat">
+        <ul id="messages"></ul>
+        <div id="typing-indicator">
+          <span class="username"></span>
+          is typing...
+        </div>
+        <form action="">
+          <input id="m" autocomplete="off"/><button>Send</button>
+        </form>
+      </div>
+    </div>
+
+
+
+  <button type="button" id="Start" name="button">Start Game</button>
+
+    <!-- This is all the other scripts -->
+    <script src = "https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src = "drawing.js"></script>
+
+  </body>
+  </html>
