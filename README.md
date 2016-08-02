@@ -1,6 +1,7 @@
 # pictionarySocketIO
 
 # Try it out here:
+((Since it uses Node.js and Socket.IO, used npm now to publish it))
 <https://draw-together-mttgeqvtqj.now.sh>
 
 
