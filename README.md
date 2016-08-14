@@ -1,8 +1,7 @@
 # pictionarySocketIO
 
-# Try it out here:
-((Since it uses Node.js and Socket.IO, used npm now to publish it))
-<https://draw-together-mttgeqvtqj.now.sh>
+# Try it out here: <https://draw-together-mttgeqvtqj.now.sh>
+Used [npm now](https://www.npmjs.com/package/now) to publish/deploy the project.
 
 
 ##Objective
